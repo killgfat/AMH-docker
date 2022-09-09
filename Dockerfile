@@ -1,6 +1,6 @@
 FROM debian:stable
 
-USER ROOT
+USER root
 
 RUN apt-get update && apt-get install -y wget \
     wget http://dl.amh.sh/amh.sh && bash amh.sh | tee amh.log
