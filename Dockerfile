@@ -1,4 +1,4 @@
-FROM Debian:stable
+FROM debian:stable
 
 USER ROOT
 
