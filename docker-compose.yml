@@ -1,0 +1,18 @@
+---
+version: "2.1"
+services:
+  amh:
+    image: killgfat-amh-docker:latest
+    container_name: amh
+    environment:
+      - PUID=0
+      - PGID=100
+      - TZ=Asia/Shanghai
+    volumes:
+      -  /var/www/wwwroot:/www/wwwroot
+    ports:
+      - 80:80
+      - 443:443 #https
+      - 8888:8888 #panel
+      - 3306:3306 #mysql
+    restart: unless-stopped
